@@ -1,8 +1,7 @@
-import * as shared from '../entries/pages/project/_page.js';
+
 
 export const index = 50;
-export const component = async () => (await import('../entries/pages/project/_page.svelte.js')).default;
-export const file = '_app/immutable/components/pages/project/_page.svelte-cf15f883.js';
-export { shared };
-export const imports = ["_app/immutable/components/pages/project/_page.svelte-cf15f883.js","_app/immutable/chunks/index-41fb7161.js","_app/immutable/chunks/Transition-e98e4d12.js","_app/immutable/chunks/utils-bc30ca66.js","_app/immutable/chunks/Project-aa404759.js","_app/immutable/chunks/index-57faca6a.js","_app/immutable/chunks/device-f79ded17.js","_app/immutable/chunks/TransitionInView-a4d7875f.js","_app/immutable/chunks/IntersectionObserver-b7033c65.js","_app/immutable/chunks/BackTo-5ad9de26.js","_app/immutable/chunks/Seo-c492594c.js","_app/immutable/modules/pages/project/_page.js-2084af65.js","_app/immutable/chunks/_page-2879d6df.js"];
-export const stylesheets = ["_app/immutable/assets/+page-7ff81674.css","_app/immutable/assets/Project-aa7117a4.css","_app/immutable/assets/TransitionInView-14acc828.css","_app/immutable/assets/BackTo-7311c9bf.css"];
+export const component = async () => (await import('../entries/pages/post/tidy-tuesday-replication/_page.md.js')).default;
+export const file = '_app/immutable/components/pages/post/tidy-tuesday-replication/_page.md-4a01d5e1.js';
+export const imports = ["_app/immutable/components/pages/post/tidy-tuesday-replication/_page.md-4a01d5e1.js","_app/immutable/chunks/index-ba7ab4c0.js","_app/immutable/chunks/_layout-1aef85ba.js","_app/immutable/chunks/Transition-9ec73602.js","_app/immutable/chunks/utils-7e5a7863.js","_app/immutable/chunks/CornerTitle-26019de2.js","_app/immutable/chunks/index-002611ec.js","_app/immutable/chunks/BackTo-f9fff98e.js","_app/immutable/chunks/Seo-1580ca8c.js","_app/immutable/chunks/IntersectionObserver-b62ffd30.js","_app/immutable/chunks/Image-a9dbe293.js"];
+export const stylesheets = ["_app/immutable/assets/Info-936b0632.css","_app/immutable/assets/Image-f79a09af.css","_app/immutable/assets/_layout-e2653856.css","_app/immutable/assets/CornerTitle-f8530bec.css","_app/immutable/assets/BackTo-7311c9bf.css"];

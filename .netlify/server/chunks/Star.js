@@ -1,6 +1,6 @@
 import { c as create_ssr_component, d as add_attribute, e as escape } from "./index.js";
+import "./motion.js";
 import { gsap } from "gsap";
-import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin.js";
 const Star_svelte_svelte_type_style_lang = "";
 const css = {
   code: "svg.svelte-1exk3bt{pointer-events:none}",
@@ -15,7 +15,6 @@ const Star = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { stroke = "transparent" } = $$props;
   let { hovered } = $$props;
   let { index } = $$props;
-  gsap.registerPlugin(MorphSVGPlugin);
   let star;
   const changePath = function() {
     if (hovered == true) {

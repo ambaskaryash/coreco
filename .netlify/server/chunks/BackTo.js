@@ -1,7 +1,7 @@
 import { c as create_ssr_component, b as subscribe, d as add_attribute } from "./index.js";
-import { gsap } from "gsap";
 import { SplitText } from "gsap/dist/SplitText.js";
 import { p as pageTransitionDelay, b as prefersReducedMotion } from "./motion.js";
+import { gsap } from "gsap";
 const Transition = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_pageTransitionDelay;
   let $$unsubscribe_prefersReducedMotion;

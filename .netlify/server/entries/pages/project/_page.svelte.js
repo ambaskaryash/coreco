@@ -2,10 +2,11 @@ import { c as create_ssr_component, v as validate_component, f as each } from ".
 import { T as Transition, B as BackTo } from "../../../chunks/BackTo.js";
 import { P as Project } from "../../../chunks/Project.js";
 import { S as Seo } from "../../../chunks/Seo.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../chunks/motion.js";
 import "../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 import "../../../chunks/device.js";
 import "bowser";
 import "../../../chunks/TransitionInView.js";
@@ -48,7 +49,7 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
   <h1 class="${"page-title transition-title overflow-hidden"}">Projects</h1>
 
   <div class="${"projects-container transition-content svelte-uvasr7"}">${each(filteredProjects, (project) => {
-    return `${validate_component(Project, "ProjectSection").$$render(
+    return `<div>${validate_component(Project, "ProjectSection").$$render(
       $$result,
       {
         project: project.metadata,
@@ -56,7 +57,8 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
       },
       {},
       {}
-    )}`;
+    )}
+      </div>`;
   })}</div>
 </main>`;
 });

@@ -1,10 +1,11 @@
 import { c as create_ssr_component, v as validate_component } from "../../../../chunks/index.js";
 import { L as Layout } from "../../../../chunks/_layout2.js";
 import "../../../../chunks/BackTo.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../../chunks/motion.js";
 import "../../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 import "../../../../chunks/Seo.js";
 import "../../../../chunks/IntersectionObserver.js";
 const metadata = {

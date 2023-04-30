@@ -3,11 +3,10 @@ import { L as Layout } from "../../../../chunks/_layout3.js";
 import { I as Image } from "../../../../chunks/Image.js";
 import { I as Info } from "../../../../chunks/Info.js";
 import { C as Code } from "../../../../chunks/Code.js";
-import { gsap } from "gsap";
-import { SplitText } from "gsap/dist/SplitText.js";
-import "../../../../chunks/BackTo.js";
 import "../../../../chunks/motion.js";
-import "../../../../chunks/index2.js";
+import "../../../../chunks/BackTo.js";
+import "gsap/dist/SplitText.js";
+import "gsap";
 import "../../../../chunks/CornerTitle.js";
 import "../../../../chunks/utils.js";
 import "../../../../chunks/Seo.js";
@@ -23,13 +22,14 @@ import "prismjs/components/prism-css.js";
 import "prismjs/components/prism-r.js";
 import "prismjs/components/prism-json.js";
 import "prismjs/components/prism-yaml.js";
+import "../../../../chunks/index2.js";
+import "gsap/dist/MorphSVGPlugin.js";
 const TransitionExample_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".example.svelte-60m7ko{width:auto;margin:1.15rem auto;background:var(--semitransparent-bg);padding:2rem;border-radius:0.2rem;display:flex;flex-direction:column;justify-content:center;place-items:center;position:relative}.button.svelte-60m7ko{text-align:center;font-size:1.25rem}h1.svelte-60m7ko{margin:2.5rem 0 0.5rem 0 !important}.code.svelte-60m7ko{position:absolute;right:0;top:unset;bottom:0;padding:0.5rem;font-size:0.75rem;text-transform:uppercase;font-family:var(--font-sans)}",
   map: null
 };
 const TransitionExample = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  gsap.registerPlugin(SplitText);
   $$result.css.add(css);
   return `<div class="${"example svelte-60m7ko"}"><div class="${"button svelte-60m7ko"}">Transition</div>
   <h1 id="${"transition-me"}" class="${"svelte-60m7ko"}">Hi, I&#39;m Connor Rothschild!</h1>

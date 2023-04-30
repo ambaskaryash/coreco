@@ -1,10 +1,11 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../../chunks/index.js";
 import { T as Transition, B as BackTo } from "../../../chunks/BackTo.js";
 import { S as Seo } from "../../../chunks/Seo.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../chunks/motion.js";
 import "../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: "p.svelte-1atmguu{margin-bottom:1.15rem;line-height:1.25}.conversation-container.svelte-1atmguu{display:flex;flex-wrap:wrap;width:100%;justify-content:space-between;padding-bottom:2rem;border-bottom:1px solid rgba(var(--accent-color-rgb), 0.2)}.topic.svelte-1atmguu{flex:1 1 calc(50% - 1rem);padding:1rem 0;text-align:left;margin:1rem 1rem 0 0;border-radius:0.2rem}.topic.svelte-1atmguu:nth-child(even){text-align:right}.topic-title.svelte-1atmguu{margin-bottom:1rem;font-size:1.15rem;font-family:var(--font-sans);text-transform:uppercase;font-weight:700}li.svelte-1atmguu{list-style:none;font-weight:300;font-size:1.1rem;margin-bottom:0;padding-left:0;margin-left:0}.subsection.svelte-1atmguu{margin-top:2.5rem}.subsection-title.svelte-1atmguu{font-size:2.5rem;font-family:var(--font-serif);margin-bottom:1.5rem;text-align:center;text-transform:uppercase;font-weight:200}.larger.svelte-1atmguu{font-size:1.5rem;line-height:1.3;font-weight:400;margin-bottom:2rem;letter-spacing:-0.01rem;color:var(--text-color)}@media screen and (max-width: 768px){.conversation-container.svelte-1atmguu{flex-direction:column}}@media screen and (max-width: 568px){.topic.svelte-1atmguu{max-width:100%;margin:0.5rem 0}li.svelte-1atmguu{width:auto}.larger.svelte-1atmguu{font-size:1.25rem}}",

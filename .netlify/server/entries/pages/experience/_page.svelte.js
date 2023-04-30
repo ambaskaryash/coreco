@@ -2,10 +2,11 @@ import { c as create_ssr_component, v as validate_component, e as escape, d as a
 import { T as Transition, B as BackTo } from "../../../chunks/BackTo.js";
 import { T as TransitionInView } from "../../../chunks/TransitionInView.js";
 import { S as Seo } from "../../../chunks/Seo.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../chunks/motion.js";
 import "../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 import "../../../chunks/IntersectionObserver.js";
 const Job_svelte_svelte_type_style_lang = "";
 const css = {
@@ -60,7 +61,7 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
   <h1 class="${"page-title transition-title overflow-hidden"}">Work</h1>
 
   <div class="${"transition-content"}">${each(sortedJobs, (job) => {
-    return `${validate_component(Job, "JobSection").$$render(
+    return `<div>${validate_component(Job, "JobSection").$$render(
       $$result,
       {
         job: job.metadata,
@@ -70,7 +71,8 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
       },
       {},
       {}
-    )}`;
+    )}
+      </div>`;
   })}</div>
 </main>`;
 });

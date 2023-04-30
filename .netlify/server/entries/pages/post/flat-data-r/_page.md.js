@@ -4,10 +4,11 @@ import { C as Code } from "../../../../chunks/Code.js";
 import { I as Image } from "../../../../chunks/Image.js";
 import { I as Info } from "../../../../chunks/Info.js";
 import "../../../../chunks/BackTo.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../../chunks/motion.js";
 import "../../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 import "../../../../chunks/CornerTitle.js";
 import "../../../../chunks/utils.js";
 import "../../../../chunks/Seo.js";
@@ -29,7 +30,7 @@ import "prismjs/components/prism-yaml.js";
   "description": "Fetch and clean data automatically with GitHub Actions + R",
   "image": "flat-data-r/header.png",
   "date": "2021-05-02",
-  "featured": true,
+  "featured": false,
   "tags": ["r", "github", "tutorial"]
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

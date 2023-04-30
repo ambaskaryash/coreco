@@ -4,8 +4,9 @@ import "lodash.debounce";
 import { w as windowHeight, a as windowWidth, m as menuExpanded, p as pageTransitionDelay } from "../../chunks/motion.js";
 import { p as page } from "../../chunks/stores.js";
 import { gsap } from "gsap";
-import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin.js";
 import { i as isTouchscreen } from "../../chunks/device.js";
+import "gsap/dist/SplitText.js";
+import "gsap/dist/MorphSVGPlugin.js";
 import "bowser";
 const defaultValue = "dark";
 const initialValue = defaultValue;
@@ -26,7 +27,7 @@ const Window = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const NavListItem_svelte_svelte_type_style_lang = "";
 const OpenToClose_svelte_svelte_type_style_lang = "";
-const css$6 = {
+const css$7 = {
   code: "svg.svelte-32a0su{width:1.9rem;height:1.9rem;fill:var(--accent-color)}",
   map: null
 };
@@ -34,7 +35,6 @@ let openPath = "M 3.121094 5.519531 L 3.121094 6.960938 L 20.878906 6.960938 L 2
 let closedPath = "M6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289Z";
 const OpenToClose = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { expanded } = $$props;
-  gsap.registerPlugin(MorphSVGPlugin);
   let icon;
   const switchIcon = function() {
     gsap.to(icon, {
@@ -45,15 +45,15 @@ const OpenToClose = create_ssr_component(($$result, $$props, $$bindings, slots) 
   };
   if ($$props.expanded === void 0 && $$bindings.expanded && expanded !== void 0)
     $$bindings.expanded(expanded);
-  $$result.css.add(css$6);
+  $$result.css.add(css$7);
   {
     switchIcon();
   }
   return `<svg xmlns="${"http://www.w3.org/2000/svg"}" viewBox="${"0 0 24 24"}" class="${"svelte-32a0su"}"><g><path id="${"icon"}"${add_attribute("d", openPath, 0)}></path></g></svg>`;
 });
 const Nav_svelte_svelte_type_style_lang = "";
-const css$5 = {
-  code: "#nav.svelte-3vdwdn.svelte-3vdwdn{display:flex;place-items:center;position:fixed;margin:0 auto;width:100%;height:var(--nav-height);z-index:102;justify-content:space-between;pointer-events:none}#nav.svelte-3vdwdn>.svelte-3vdwdn{pointer-events:all}.toggle-button.svelte-3vdwdn.svelte-3vdwdn{display:flex;margin-right:1rem;cursor:pointer;user-select:none;background:none;border:none}.toggle-button.svelte-3vdwdn.svelte-3vdwdn:focus,.toggle-button.svelte-3vdwdn.svelte-3vdwdn:active{background:none}.massive-word.svelte-3vdwdn.svelte-3vdwdn{position:absolute;font-size:20vw;right:2.5vw;bottom:0;opacity:0.15;user-select:none;pointer-events:none}.home-button.svelte-3vdwdn.svelte-3vdwdn{display:flex;place-items:center;padding-left:1rem;margin-left:0;font-weight:300;letter-spacing:1px;font-size:2rem;font-family:var(--font-serif);cursor:pointer}@media screen and (max-width: 868px){.hasBackground.svelte-3vdwdn.svelte-3vdwdn{background:var(--primary-color)}}@media screen and (max-width: 560px){.home-button.svelte-3vdwdn.svelte-3vdwdn{font-size:1.5rem}}@media screen and (max-width: 460px){.home-button.svelte-3vdwdn.svelte-3vdwdn{padding-left:0.85rem;font-size:1.35rem}}.fullpage-nav.svelte-3vdwdn.svelte-3vdwdn{position:fixed;z-index:101;display:flex;flex-direction:column;place-items:flex-start;justify-content:center;padding-left:7.5vw;background:var(--primary-color);margin:0 auto;width:100vw;height:100%}.nav-items.svelte-3vdwdn.svelte-3vdwdn{display:flex;flex-direction:column;width:100%}.disable-scroll, .disable-scroll body{touch-action:none;-webkit-overflow-scrolling:none;overflow:hidden;overscroll-behavior:none}.disable-scroll body{overflow-y:scroll}@media screen and (max-width: 868px){.fullpage-nav.svelte-3vdwdn.svelte-3vdwdn{padding-left:0}ul.svelte-3vdwdn.svelte-3vdwdn{text-align:center}.massive-word.svelte-3vdwdn.svelte-3vdwdn{font-size:30vw;right:4vw}}",
+const css$6 = {
+  code: "#nav.svelte-1u4uzbl.svelte-1u4uzbl{display:flex;place-items:center;position:fixed;margin:0 auto;width:100%;height:var(--nav-height);z-index:103;justify-content:space-between;pointer-events:none}#nav.svelte-1u4uzbl>.svelte-1u4uzbl{pointer-events:all}.toggle-button.svelte-1u4uzbl.svelte-1u4uzbl{display:flex;margin-right:1rem;cursor:pointer;user-select:none;background:none;border:none}.toggle-button.svelte-1u4uzbl.svelte-1u4uzbl:focus,.toggle-button.svelte-1u4uzbl.svelte-1u4uzbl:active{background:none}.massive-word.svelte-1u4uzbl.svelte-1u4uzbl{position:absolute;font-size:20vw;right:2.5vw;bottom:0;opacity:0.15;user-select:none;pointer-events:none}.home-button.svelte-1u4uzbl.svelte-1u4uzbl{display:flex;place-items:center;padding-left:1rem;margin-left:0;font-weight:300;letter-spacing:1px;font-size:2rem;font-family:var(--font-serif);cursor:pointer}@media screen and (max-width: 868px){.hasBackground.svelte-1u4uzbl.svelte-1u4uzbl{background:var(--primary-color)}}@media screen and (max-width: 560px){.home-button.svelte-1u4uzbl.svelte-1u4uzbl{font-size:1.5rem}}@media screen and (max-width: 460px){.home-button.svelte-1u4uzbl.svelte-1u4uzbl{padding-left:0.85rem;font-size:1.35rem}}.fullpage-nav.svelte-1u4uzbl.svelte-1u4uzbl{position:fixed;z-index:102;display:flex;flex-direction:column;place-items:flex-start;justify-content:center;padding-left:7.5vw;background:var(--primary-color);margin:0 auto;width:100vw;height:100%}.nav-items.svelte-1u4uzbl.svelte-1u4uzbl{display:flex;flex-direction:column;width:100%}.disable-scroll, .disable-scroll body{touch-action:none;-webkit-overflow-scrolling:none;overflow:hidden;overscroll-behavior:none}.disable-scroll body{overflow-y:scroll}@media screen and (max-width: 868px){.fullpage-nav.svelte-1u4uzbl.svelte-1u4uzbl{padding-left:0}ul.svelte-1u4uzbl.svelte-1u4uzbl{text-align:center}.massive-word.svelte-1u4uzbl.svelte-1u4uzbl{font-size:30vw;right:4vw}}",
   map: null
 };
 const Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -72,7 +72,7 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.styles(styles);
   if ($$props.hasBackground === void 0 && $$bindings.hasBackground && hasBackground !== void 0)
     $$bindings.hasBackground(hasBackground);
-  $$result.css.add(css$5);
+  $$result.css.add(css$6);
   let $$settled;
   let $$rendered;
   do {
@@ -80,8 +80,8 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       menuExpanded.set(expanded);
     }
-    $$rendered = `<div id="${"nav"}"${add_attribute("style", styles, 0)} class="${["svelte-3vdwdn", hasBackground ? "hasBackground" : ""].join(" ").trim()}"><a class="${"home-button no-underline svelte-3vdwdn"}" href="${"/"}">CR</a>
-  <button class="${"toggle-button svelte-3vdwdn"}"${add_attribute("aria-label", "Open menu", 0)}>${validate_component(OpenToClose, "OpenToClose").$$render($$result, { expanded }, {}, {})}</button></div>
+    $$rendered = `<div id="${"nav"}"${add_attribute("style", styles, 0)} class="${["svelte-1u4uzbl", hasBackground ? "hasBackground" : ""].join(" ").trim()}"><a class="${"home-button no-underline svelte-1u4uzbl"}" href="${"/"}">CR</a>
+  <button class="${"toggle-button svelte-1u4uzbl"}"${add_attribute("aria-label", "Open menu", 0)}>${validate_component(OpenToClose, "OpenToClose").$$render($$result, { expanded }, {}, {})}</button></div>
 ${``}`;
   } while (!$$settled);
   $$unsubscribe_windowWidth();
@@ -91,7 +91,7 @@ ${``}`;
   return $$rendered;
 });
 const ColorSwitcher_svelte_svelte_type_style_lang = "";
-const css$4 = {
+const css$5 = {
   code: ".fullscreen-transition.svelte-16jx9vm{width:100vw;height:100vh;position:fixed;background:grey;z-index:10000}p.svelte-16jx9vm{cursor:pointer;position:fixed;bottom:20px;left:20px;font-family:var(--font-sans);font-weight:300;font-size:1.5rem;z-index:101;user-select:none}",
   map: null
 };
@@ -100,19 +100,19 @@ const ColorSwitcher = create_ssr_component(($$result, $$props, $$bindings, slots
   let $$unsubscribe_windowWidth;
   $$unsubscribe_theme = subscribe(theme, (value) => $theme = value);
   $$unsubscribe_windowWidth = subscribe(windowWidth, (value) => value);
-  $$result.css.add(css$4);
+  $$result.css.add(css$5);
   $$unsubscribe_theme();
   $$unsubscribe_windowWidth();
   return `${``}
 <p class="${"color-switcher svelte-16jx9vm"}">${escape($theme == "dark" ? "\u{1F319}" : "\u2600\uFE0F")}</p>`;
 });
 const Footer_svelte_svelte_type_style_lang = "";
-const css$3 = {
+const css$4 = {
   code: "footer.svelte-1n8zlbx.svelte-1n8zlbx{display:flex;place-items:center;height:300px;padding:3rem 1rem;background:var(--footer-bg);color:var(--pure-text-color);position:relative;z-index:99;box-shadow:-1px -1px 6px var(--box-shadow-color);transition:height 300ms ease}.flex-container.svelte-1n8zlbx.svelte-1n8zlbx{max-width:1268px;height:100%;width:100%;margin:auto;display:flex;justify-content:space-between;place-items:center}footer.svelte-1n8zlbx h1.svelte-1n8zlbx{color:var(--pure-text-color)}.right.svelte-1n8zlbx.svelte-1n8zlbx{display:flex;justify-content:space-evenly}.left.svelte-1n8zlbx.svelte-1n8zlbx,.right.svelte-1n8zlbx.svelte-1n8zlbx{flex:1}.left.svelte-1n8zlbx.svelte-1n8zlbx{text-align:left}.name.svelte-1n8zlbx.svelte-1n8zlbx{font-size:2.5rem;font-weight:600;line-height:1;margin-bottom:1rem;letter-spacing:0.025rem}.copyright.svelte-1n8zlbx.svelte-1n8zlbx{font-size:0.85rem;font-weight:400;text-transform:uppercase;color:var(--pure-text-color);font-family:var(--font-sans)}.column-header.svelte-1n8zlbx.svelte-1n8zlbx{text-align:center;margin-bottom:1rem;text-transform:uppercase;font-family:var(--font-serif);font-weight:600;font-size:2rem;color:var(--pure-text-color)}.column-content.svelte-1n8zlbx.svelte-1n8zlbx{display:flex;flex-direction:column}.column-content.copyright.svelte-1n8zlbx.svelte-1n8zlbx{place-items:flex-start}.column-content.connect.svelte-1n8zlbx.svelte-1n8zlbx,.column-content.contact.svelte-1n8zlbx.svelte-1n8zlbx{place-items:center}.link.svelte-1n8zlbx.svelte-1n8zlbx{color:var(--pure-text-color);font-family:var(--font-sans);margin-bottom:0.15rem;padding-bottom:0.25rem;font-weight:200;font-size:1.1rem;letter-spacing:0.025rem;width:min-content;text-transform:uppercase}.wave.svelte-1n8zlbx.svelte-1n8zlbx:hover{display:inline-block;animation:svelte-1n8zlbx-wiggle 700ms linear forwards}@keyframes svelte-1n8zlbx-wiggle{0%{transform:rotate(0)}20%{transform:rotate(7.5deg)}40%{transform:rotate(-7.5deg)}60%{transform:rotate(7.5deg)}80%{transform:rotate(-7.5deg)}100%{transform:rotate(0)}}@media screen and (max-width: 868px){footer.svelte-1n8zlbx.svelte-1n8zlbx{height:400px}.flex-container.svelte-1n8zlbx.svelte-1n8zlbx{flex-direction:column}.left.svelte-1n8zlbx.svelte-1n8zlbx{width:100%}.right.svelte-1n8zlbx.svelte-1n8zlbx{width:80%;margin-left:auto;justify-content:flex-end;place-items:flex-end !important}.right.svelte-1n8zlbx .column.svelte-1n8zlbx:first-of-type{margin-right:10%}.name.svelte-1n8zlbx.svelte-1n8zlbx{font-size:2.5rem}.link.svelte-1n8zlbx.svelte-1n8zlbx{font-size:1rem}.column-content.connect.svelte-1n8zlbx.svelte-1n8zlbx,.column-content.contact.svelte-1n8zlbx.svelte-1n8zlbx{place-items:flex-end}}@media screen and (max-width: 468px){.right.svelte-1n8zlbx.svelte-1n8zlbx{width:100%;justify-content:space-between}.right.svelte-1n8zlbx .column:first-of-type .column-content.svelte-1n8zlbx{align-items:flex-start}.right.svelte-1n8zlbx .column:last-of-type .column-content.svelte-1n8zlbx{align-items:flex-end}.name.svelte-1n8zlbx.svelte-1n8zlbx{font-size:2rem}.copyright.svelte-1n8zlbx.svelte-1n8zlbx{font-size:0.65rem}}",
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$3);
+  $$result.css.add(css$4);
   return `<footer class="${"svelte-1n8zlbx"}"><div class="${"flex-container svelte-1n8zlbx"}"><div class="${"left svelte-1n8zlbx"}"><h1 class="${"name svelte-1n8zlbx"}">Thanks for visiting <span class="${"wave svelte-1n8zlbx"}">\u{1F44B}</span></h1>
       <div class="${"column-content copyright svelte-1n8zlbx"}"><p style="${"font-weight: 400; font-size: 1.2rem;"}">Connor Rothschild</p>
         <p style="${"font-size: .95rem;"}">All rights reserved \xA9 2022</p></div></div>
@@ -127,7 +127,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 </footer>`;
 });
 const CircleText_svelte_svelte_type_style_lang = "";
-const css$2 = {
+const css$3 = {
   code: ".circle.svelte-1asjvwp{position:sticky;right:6px;bottom:6px;padding:1rem;z-index:101;overflow:hidden;width:min-content;margin-left:auto;margin-right:6px;transform:translateZ(0);transition:all 600ms ease;cursor:pointer}.circle.svelte-1asjvwp:hover{transform:scale3d(1.05, 1.05, 1.05)}img.svelte-1asjvwp{position:absolute;border-radius:50%;width:100px;height:100px;object-fit:contain;transform:scale(0.795);z-index:100}text.svelte-1asjvwp{fill:var(--text-color);font-family:var(--font-serif);font-weight:200;font-size:63px;letter-spacing:-1px;text-shadow:1px 0px 0px var(--pure-background-color);user-select:none}path.svelte-1asjvwp{fill:rgba(var(--accent-color-rgb), 0.2)}.circleText.svelte-1asjvwp{width:100px;height:100px;overflow:visible;transform-origin:center center;stroke-opacity:0.75;animation:svelte-1asjvwp-rotate 25s linear infinite}@keyframes svelte-1asjvwp-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.invisible.svelte-1asjvwp{opacity:0}",
   map: null
 };
@@ -137,12 +137,32 @@ const CircleText = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let $menuExpanded, $$unsubscribe_menuExpanded;
   $$unsubscribe_windowWidth = subscribe(windowWidth, (value) => $windowWidth = value);
   $$unsubscribe_menuExpanded = subscribe(menuExpanded, (value) => $menuExpanded = value);
-  $$result.css.add(css$2);
+  $$result.css.add(css$3);
   text = "\u{1F44B} Connor \u{1F440} Rothschild \u{1F920} Connor \u{1F525} Rothschild";
   $$unsubscribe_windowWidth();
   $$unsubscribe_menuExpanded();
   return `${$windowWidth > 968 ? `<div aria-hidden="${"true"}" class="${"circle " + escape($menuExpanded ? "invisible" : "", true) + " svelte-1asjvwp"}" sveltekit:prefetch>${``}
     <svg class="${"circleText svelte-1asjvwp"}" viewBox="${"0 0 500 500"}" data-duration="${"5"}"><path id="${"circle"}" fill="${"none"}" data-duration="${"5"}" d="${"M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"}" class="${"svelte-1asjvwp"}"></path><text dy="${"-25"}" class="${"svelte-1asjvwp"}"><textPath xlink:href="${"#circle"}">${escape(text)}</textPath></text></svg></div>` : ``}`;
+});
+const Option_svelte_svelte_type_style_lang = "";
+const OptionsPage_svelte_svelte_type_style_lang = "";
+const Jukebox_svelte_svelte_type_style_lang = "";
+const css$2 = {
+  code: ".jukebox.svelte-6c30z8.svelte-6c30z8{position:fixed;left:50%;transform:translateX(-50%) translateZ(0);bottom:6px;padding:1rem 0.5rem;z-index:104;overflow:hidden;overflow:visible;width:max-content;transition:all 600ms ease;cursor:pointer}@media screen and (max-width: 967px){.jukebox.svelte-6c30z8.svelte-6c30z8{bottom:0;right:6px;transform:none;left:unset}}.icon.svelte-6c30z8.svelte-6c30z8{font-size:2rem;margin:0;transform-origin:center;width:max-content;padding:1px}.playing.svelte-6c30z8 .icon.svelte-6c30z8{animation:svelte-6c30z8-rotate 5s linear infinite}@keyframes svelte-6c30z8-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.playing-line.svelte-6c30z8 .marquee-text.svelte-6c30z8{position:absolute;top:50%;transform:translateY(-50%);left:100%;width:300px;white-space:nowrap;overflow:hidden;z-index:-1}@media screen and (max-width: 967px){.playing-line.svelte-6c30z8 .marquee-text.svelte-6c30z8{text-align:right;left:-3px;transform:translateY(-50%) translateX(-100%)}}@media screen and (max-width: 528px){.playing-line.svelte-6c30z8 .marquee-text.svelte-6c30z8{display:none}}@media screen and (max-width: 567px){.jukebox.svelte-6c30z8.svelte-6c30z8{display:none}}",
+  map: null
+};
+const Jukebox = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$2);
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    $$rendered = `${``}
+<div class="${["jukebox svelte-6c30z8", ""].join(" ").trim()}"><div class="${"playing-line svelte-6c30z8"}"><div class="${"icon svelte-6c30z8"}">${escape("\u{1F507}")}</div>
+    ${``}</div>
+</div>`;
+  } while (!$$settled);
+  return $$rendered;
 });
 const Noise_svelte_svelte_type_style_lang = "";
 const css$1 = {
@@ -195,6 +215,7 @@ ${validate_component(ColorSwitcher, "ColorSwitcher").$$render($$result, {}, {}, 
 ${slots.default ? slots.default({}) : ``}
 ${validate_component(Loading, "Loading").$$render($$result, {}, {}, {})}
 ${validate_component(CircleText, "Circle").$$render($$result, {}, {}, {})}
+${validate_component(Jukebox, "Jukebox").$$render($$result, {}, {}, {})}
 ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 export {

@@ -7,10 +7,10 @@ import { T as TransitionInView } from "../../../chunks/TransitionInView.js";
 import { T as Transition, B as BackTo } from "../../../chunks/BackTo.js";
 import { S as Seo } from "../../../chunks/Seo.js";
 import "gsap";
-import "gsap/dist/MorphSVGPlugin.js";
 import "../../../chunks/index2.js";
-import "../../../chunks/IntersectionObserver.js";
 import "gsap/dist/SplitText.js";
+import "gsap/dist/MorphSVGPlugin.js";
+import "../../../chunks/IntersectionObserver.js";
 const Blog_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".post-container.svelte-1uw1sgh.svelte-1uw1sgh{display:block;width:100%;height:100%;border-radius:10px;background:var(--semitransparent-bg);padding:20px;margin:6px;overflow:hidden;border:1px solid transparent;transition:all 100ms linear, border 300ms ease;cursor:pointer}.perspective-container.svelte-1uw1sgh.svelte-1uw1sgh{display:block;height:100%;display:flex;position:relative;margin:-4px}.card-highlight.svelte-1uw1sgh.svelte-1uw1sgh{position:absolute;width:100%;height:100%;border-radius:50%;background:rgba(0, 0, 0, 0.01);filter:blur(20px);z-index:1;pointer-events:none}.post-card.svelte-1uw1sgh.svelte-1uw1sgh{display:flex;flex-direction:column;justify-content:space-between;height:100%;pointer-events:none}.post-date.svelte-1uw1sgh.svelte-1uw1sgh{text-transform:uppercase;letter-spacing:0.34px;font-size:1rem;font-family:var(--font-serif);color:var(--off-text-color);font-weight:200;margin-bottom:0.75rem}.post-title.svelte-1uw1sgh.svelte-1uw1sgh{font-size:1.5rem;margin-bottom:0.75rem;font-family:var(--font-sans);font-weight:500;line-height:1.2}.post-description.svelte-1uw1sgh.svelte-1uw1sgh{font-size:1.2rem;font-family:var(--font-sans);font-weight:200;line-height:1.15}.post-tags.svelte-1uw1sgh.svelte-1uw1sgh{margin-top:1rem;text-align:right}.post-tag.svelte-1uw1sgh.svelte-1uw1sgh{font-family:var(--font-sans);padding:3px 8px;background:rgba(var(--accent-color-rgb), 0.1);margin:2px;margin-right:2px;border-radius:3px;color:rgba(var(--accent-color-rgb), 1);font-size:0.85rem;font-weight:200;text-transform:uppercase;margin-right:0.25rem;letter-spacing:1px}.featured-star.svelte-1uw1sgh.svelte-1uw1sgh{position:absolute;top:0;right:0;padding:6px}.hovered.svelte-1uw1sgh.svelte-1uw1sgh{border:1px solid var(--accent-color)}.unhovered.svelte-1uw1sgh.svelte-1uw1sgh{filter:grayscale(1)}.unhovered.svelte-1uw1sgh .post-date.svelte-1uw1sgh,.unhovered.svelte-1uw1sgh .post-title.svelte-1uw1sgh,.unhovered.svelte-1uw1sgh .post-description.svelte-1uw1sgh,.unhovered.svelte-1uw1sgh .post-tag.svelte-1uw1sgh,.unhovered.svelte-1uw1sgh .featured-star.svelte-1uw1sgh{color:transparent;opacity:0.5;text-shadow:0 0 2px var(--text-color)}.post-date.svelte-1uw1sgh.svelte-1uw1sgh,.post-title.svelte-1uw1sgh.svelte-1uw1sgh,.post-description.svelte-1uw1sgh.svelte-1uw1sgh,.post-tag.svelte-1uw1sgh.svelte-1uw1sgh,.featured-star.svelte-1uw1sgh.svelte-1uw1sgh{transition:opacity 600ms cubic-bezier(0.37, 0.35, 0.01, 0.99),\n      color 600ms cubic-bezier(0.37, 0.35, 0.01, 0.99),\n      text-shadow 600ms cubic-bezier(0.37, 0.35, 0.01, 0.99)}@media screen and (max-width: 400px){.post-date.svelte-1uw1sgh.svelte-1uw1sgh{font-size:0.85rem}.post-title.svelte-1uw1sgh.svelte-1uw1sgh{font-size:1.2rem;margin-bottom:1rem}.post-description.svelte-1uw1sgh.svelte-1uw1sgh{font-size:1rem}.post-tag.svelte-1uw1sgh.svelte-1uw1sgh{font-size:0.75rem}}",
@@ -137,7 +137,7 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
     )}
   <h1 class="${"page-title transition-title overflow-hidden"}">Writing</h1>
   <div class="${"transition-content posts-grid svelte-1ge7og7"}">${each(filteredPosts, (post, index) => {
-      return `${validate_component(Blog, "BlogSection").$$render(
+      return `<div>${validate_component(Blog, "BlogSection").$$render(
         $$result,
         {
           post: post.metadata,
@@ -152,9 +152,10 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
           }
         },
         {}
-      )}`;
+      )}
+        </div>`;
     })}</div>
-  ${``}
+  <div>${``}</div>
   <button class="${"button pulled-right block transition-content svelte-1ge7og7"}">${escape("Show the archives \u{1F62C}")}</button>
 </main>`;
   } while (!$$settled);

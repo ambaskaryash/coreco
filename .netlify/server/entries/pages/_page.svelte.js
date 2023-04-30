@@ -13,8 +13,8 @@ import { d as dateFormat } from "../../chunks/utils.js";
 import { S as Star } from "../../chunks/Star.js";
 import { A as Award } from "../../chunks/Award.js";
 import "../../chunks/index2.js";
-import "bowser";
 import "gsap/dist/MorphSVGPlugin.js";
+import "bowser";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const Hero_svelte_svelte_type_style_lang = "";
 const css$6 = {
@@ -57,13 +57,12 @@ const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       </h1></div>
     <h2 class="${["subtitle begin-invisible svelte-lu3vai", ""].join(" ").trim()}">And I tell visual stories
       <span class="${["switch svelte-lu3vai", "unclicked"].join(" ").trim()}"><!-- HTML_TAG_START -->${subtitleString}<!-- HTML_TAG_END --></span></h2></div>
-  <h1 class="${"year svelte-lu3vai"}">Portfolio 2021</h1>
+  <h1 class="${"year svelte-lu3vai"}">Portfolio 2023</h1>
 </section>`;
 });
 const SectionTitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $prefersReducedMotion, $$unsubscribe_prefersReducedMotion;
   $$unsubscribe_prefersReducedMotion = subscribe(prefersReducedMotion, (value) => $prefersReducedMotion = value);
-  gsap.registerPlugin(SplitText);
   let { intersecting } = $$props;
   let { element } = $$props;
   let transition = function() {
@@ -190,7 +189,7 @@ const Projects = create_ssr_component(($$result, $$props, $$bindings, slots) => 
             }
           })}
     ${$isPre1015 ? `<div class="${"projects-container svelte-1wc5mcr"}">${each(filteredProjects, (project) => {
-            return `${validate_component(Project, "ProjectSection").$$render(
+            return `<div>${validate_component(Project, "ProjectSection").$$render(
               $$result,
               {
                 project: project.metadata,
@@ -198,7 +197,8 @@ const Projects = create_ssr_component(($$result, $$props, $$bindings, slots) => 
               },
               {},
               {}
-            )}`;
+            )}
+        </div>`;
           })}</div>` : `${validate_component(HoverVideo, "HoverVideo").$$render(
             $$result,
             {
@@ -320,7 +320,7 @@ const Blog = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             }
           })}</div>
     <div class="${"posts-grid width-container svelte-1jgk20q"}">${each(finalPosts, (post, index) => {
-            return `${validate_component(BlogText, "BlogSection").$$render(
+            return `<div style="${"height: 100%; width: 100%;"}">${validate_component(BlogText, "BlogSection").$$render(
               $$result,
               {
                 post: post.metadata,
@@ -335,7 +335,8 @@ const Blog = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 }
               },
               {}
-            )}`;
+            )}
+      </div>`;
           })}</div></section>`;
         }
       }
@@ -394,7 +395,7 @@ const Awards = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           })}
 
     <div class="${"awards-grid"}">${each(filteredAwards, (award) => {
-            return `${validate_component(Award, "AwardSection").$$render(
+            return `<div>${validate_component(Award, "AwardSection").$$render(
               $$result,
               {
                 award: award.metadata,
@@ -408,7 +409,8 @@ const Awards = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 }
               },
               {}
-            )}`;
+            )}
+      </div>`;
           })}</div></section>`;
         }
       }

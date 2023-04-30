@@ -20,7 +20,7 @@ const CornerTitle = create_ssr_component(($$result, $$props, $$bindings, slots) 
   $$result.css.add(css);
   cornerTitleWidth = (w - 768) / 2 * 0.85;
   return `
-${!intersecting && w > 1168 && pageHasLoaded ? `<div aria-hidden="${"true"}" class="${"corner svelte-ykf32"}" style="${"max-width: " + escape(cornerTitleWidth, true) + "px"}"><p class="${"corner-title svelte-ykf32"}">${escape(title)}</p>
+${!intersecting && w > 1168 && pageHasLoaded ? `<div aria-hidden="${"true"}" class="${"corner svelte-ykf32"}" style="${"max-width: " + escape(cornerTitleWidth, true) + "px"}"><p class="${"corner-title svelte-ykf32"}"><!-- HTML_TAG_START -->${title}<!-- HTML_TAG_END --></p>
     <p class="${"corner-subtitle svelte-ykf32"}">${escape(subtitle)}</p>
     <p class="${"scroll-to-top svelte-ykf32"}">Scroll to top \u2191
     </p></div>` : ``}`;

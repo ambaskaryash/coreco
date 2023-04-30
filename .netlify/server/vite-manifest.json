@@ -66,6 +66,7 @@
       "src/routes/post/map-springfield/+page.md",
       "src/routes/post/nuxt-blog-starter/+page.md",
       "src/routes/post/refugee-trends/+page.md",
+      "src/routes/post/specifying-exact-ticks-d3/+page.md",
       "src/routes/post/svelte-and-d3/+page.md",
       "src/routes/post/svelte-reactivity/+page.md",
       "src/routes/post/svelte-scatter/+page.md",
@@ -108,7 +109,7 @@
       "_device.js"
     ],
     "css": [
-      "_app/immutable/assets/+layout-c9e0fdaa.css"
+      "_app/immutable/assets/+layout-0d12423f.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -929,6 +930,29 @@
       "_app/immutable/assets/Image-2f934924.css"
     ]
   },
+  "src/routes/post/specifying-exact-ticks-d3/+page.md": {
+    "file": "entries/pages/post/specifying-exact-ticks-d3/_page.md.js",
+    "src": "src/routes/post/specifying-exact-ticks-d3/+page.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index.js",
+      "__layout3.js",
+      "_Code.js",
+      "_BackTo.js",
+      "_motion.js",
+      "_index2.js",
+      "_CornerTitle.js",
+      "_utils.js",
+      "_Seo.js",
+      "_IntersectionObserver.js"
+    ],
+    "css": [
+      "_app/immutable/assets/+page-06d5525a.css",
+      "_app/immutable/assets/Image-2f934924.css",
+      "_app/immutable/assets/Info-bd734744.css"
+    ]
+  },
   "src/routes/post/svelte-and-d3/+page.md": {
     "file": "entries/pages/post/svelte-and-d3/_page.md.js",
     "src": "src/routes/post/svelte-and-d3/+page.md",
@@ -1035,13 +1059,13 @@
       "_Image.js",
       "_Info.js",
       "_Code.js",
-      "_BackTo.js",
       "_motion.js",
-      "_index2.js",
+      "_BackTo.js",
       "_CornerTitle.js",
       "_utils.js",
       "_Seo.js",
-      "_IntersectionObserver.js"
+      "_IntersectionObserver.js",
+      "_index2.js"
     ],
     "css": [
       "_app/immutable/assets/+page-d792a803.css",
@@ -1487,7 +1511,8 @@
   "_Star.js": {
     "file": "chunks/Star.js",
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_motion.js"
     ],
     "css": [
       "_app/immutable/assets/Star-856c60c4.css"

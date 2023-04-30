@@ -4,10 +4,11 @@ import { T as Transition, B as BackTo } from "../../../chunks/BackTo.js";
 import { S as Seo } from "../../../chunks/Seo.js";
 import "../../../chunks/TransitionInView.js";
 import "../../../chunks/IntersectionObserver.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../chunks/motion.js";
 import "../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 let title = "Awards | Connor Rothschild";
 let description = "Some of my awards.";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -41,7 +42,7 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
   <h1 class="${"page-title transition-title overflow-hidden"}">Awards</h1>
 
   <div class="${"awards-grid transition-content"}">${each(data.awards, (award) => {
-      return `${validate_component(Award, "AwardSection").$$render(
+      return `<div>${validate_component(Award, "AwardSection").$$render(
         $$result,
         {
           award: award.metadata,
@@ -55,7 +56,8 @@ ${validate_component(Seo, "Seo").$$render($$result, { title, description, image 
           }
         },
         {}
-      )}`;
+      )}
+      </div>`;
     })}</div>
 </main>`;
   } while (!$$settled);

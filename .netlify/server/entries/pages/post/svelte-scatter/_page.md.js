@@ -2,10 +2,11 @@ import { c as create_ssr_component, v as validate_component } from "../../../../
 import { L as Layout } from "../../../../chunks/_layout3.js";
 /* empty css                                                      */import { I as Info } from "../../../../chunks/Info.js";
 import "../../../../chunks/BackTo.js";
-import "gsap";
 import "gsap/dist/SplitText.js";
 import "../../../../chunks/motion.js";
 import "../../../../chunks/index2.js";
+import "gsap";
+import "gsap/dist/MorphSVGPlugin.js";
 import "../../../../chunks/CornerTitle.js";
 import "../../../../chunks/utils.js";
 import "../../../../chunks/Seo.js";
